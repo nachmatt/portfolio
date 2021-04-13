@@ -52,15 +52,22 @@
         <h2 class="section-title">
           About me
         </h2>
-        <div class="row about-wrapper">
-          <div class="col-md-6 col-sm-12">
-            <div class="about-wrapper__image">
+        <div class="row about-wrapper rounded-3">
+          <div class="col-md-6 col-sm-12 rounded-3">
+            <div class="about-wrapper__image rounded-3">
               <img
-                class="img-fluid rounded shadow-lg"
-                height="auto"
-                width="300px"
-                src="./assets/profile.jpg"
+                class="img-fluid rounded shadow-lg rounded-3 picContainer"
+                src="./assets/profile.jpg"       
                 alt="Profile Image"
+                width="450px"
+              />
+              <img
+                id="imgClickAndChange"
+                class="img-fluid rounded shadow-lg rounded-3 pic2"            
+                src="./assets/capas.png"
+                alt="Profile Image"
+                width="450px"
+                hidden
               />
             </div>
           </div>
@@ -82,6 +89,21 @@
                 <p>Black Ale</p>
               </blockquote>
               <span class="d-flex mt-3">
+                <button class="cta-btn cta-btn--resume" onClick="changeImage()">
+                  Programmer look.     
+                </button>
+                <script>
+                  function changeImage() {
+                      if (document.getElementById("imgClickAndChange").hidden == true) 
+                      {
+                          document.getElementById("imgClickAndChange").hidden = false;
+                      }
+                      else
+                      {
+                        document.getElementById("imgClickAndChange").hidden = true;
+                      }
+                  }
+              </script>
               </span>
             </div>
           </div>
@@ -97,6 +119,37 @@
           <h2 class="section-title dark-blue-text">
             Projects
           </h2>
+
+          <!-- Each .row is a project -->
+          <div class="row">
+            <div class="col-lg-4 col-sm-12">
+              <div class="project-wrapper__text">
+                <h3 class="project-wrapper__text-title">SmartBrain - AI Face Recognition</h3>
+                <div>
+                  <p class="mb-4">
+                    This is it, 'la créme de la créme' on my portfolio. The Cohiba, the Montecristo, my Eiffel Tower. The top tier project I could manage to create with help from my mentors, some coding along and many nights without sleep. 
+                    The ceiling of what my current brain state allows myself to understand, at least partially. <br>• Create a user, sign in, upload an image with a face and amaze yourself with the face recognition AI.
+                    <br><br> // HTML, CSS, JS, Create-React-App, NPM packages, PostgreSQL databases, NodeJS server, Heroku Deployment.
+                  </p>
+                </div>
+                <a target="_blank" class="cta-btn cta-btn--hero" href="https://smartbrain-nach.herokuapp.com/">
+                  C'mon, try it.
+                </a>
+                <a target="_blank" class="cta-btn text-color-main" href="https://github.com/nachmatt/smartbrain">
+                  Source Code
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-8 col-sm-12">
+              <div class="project-wrapper__image">
+                <a href="https://smartbrain-nach.herokuapp.com/" target="_blank">
+                  <div data-tilt class="thumbnail rounded">
+                    <img class="img-fluid" src="./assets/project3.png" />
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
 
           <!-- Each .row is a project -->
           <div class="row">
@@ -161,36 +214,7 @@
           </div>
           <!-- /END Project -->
 
-          <!-- Each .row is a project -->
-          <div class="row">
-            <div class="col-lg-4 col-sm-12">
-              <div class="project-wrapper__text">
-                <h3 class="project-wrapper__text-title">SmartBrain - AI Face Recognition</h3>
-                <div>
-                  <p class="mb-4">
-                    This is it, 'la créme de la créme' on my portfolio. The Cohiba, the Montecristo, my Eiffel Tower. The top tier project I could manage to create with help from my mentors, some coding along and many nights without sleep. 
-                    The ceiling of what my current brain state allows myself to understand, at least partially. <br>• Create a user, sign in, upload an image with a face and amaze yourself with the face recognition AI.
-                    <br><br> // HTML, CSS, JS, Create-React-App, NPM packages, PostgreSQL databases, NodeJS server, Heroku Deployment.
-                  </p>
-                </div>
-                <a target="_blank" class="cta-btn cta-btn--hero" href="https://smartbrain-nach.herokuapp.com/">
-                  C'mon, try it.
-                </a>
-                <a target="_blank" class="cta-btn text-color-main" href="https://github.com/nachmatt/smartbrain">
-                  Source Code
-                </a>
-              </div>
-            </div>
-            <div class="col-lg-8 col-sm-12">
-              <div class="project-wrapper__image">
-                <a href="https://smartbrain-nach.herokuapp.com/" target="_blank">
-                  <div data-tilt class="thumbnail rounded">
-                    <img class="img-fluid" src="./assets/project3.png" />
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
+          
         </div>
       </div>
     </section>
